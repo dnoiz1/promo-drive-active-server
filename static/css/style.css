@@ -1,0 +1,120 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #57aeff;
+}
+
+.blink {
+    color: gold;
+}
+
+.promo {
+    color: #57aeff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-color: #333;
+}
+body {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    padding-bottom: 40px;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+     width: 768px;
+    margin: 0 auto;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  text-align: center;
+  margin-top: -5px !important;
+  margin-bottom: 0px;
+}
+
+.masthead-brand h1 {
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+
+.masthead-brand h1 .promo {
+    font-weight: bold;
+}
+.masthead-brand h1 .blink {
+    font-style: italic;
+}
+
+.masthead-brand .caption {
+    margin-top: -10px !important;
+}
+
+#ConnectedClients {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+/*
+ * Cover
+ */
+
+.cover,
+#readme {
+    padding: 30px;
+    border: 3px solid gold;
+    border-radius: 20px;
+    margin-top: 40px;
+    
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+#readme h1:nth-child(n+2) {
+    font-size: 24px;
+    margin-top: 60px;
+}

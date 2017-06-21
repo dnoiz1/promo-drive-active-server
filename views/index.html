@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block script %}
+<script type="text/javascript">
+    $(function(){
+        var update_connected = function() {
+             setTimeout(function(){
+                $('#ConnectedClients').load('/connected_clients', function(){
+                    update_connected();
+                });
+            }, 10000);
+        }
+        update_connected();
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <div class="masthead-brand">
+                        <h1>
+                            <span class="promo">PROMO</span><span class="blink">Blink</span>
+                        </h1>
+                        <div class="caption">
+                            PART OF THE COGNITIVE DETERIORATION NETWORK                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <div class="cover-heading">
+                    <h3>Current Version: 0.2.2</h3>
+                    <h3>Users Online:</h3>
+                    <div id="ConnectedClients">{{ connected_clients }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="readme">
+           {% include 'README.html' %}
+        <?div>
+    </div>
+</div>
+{% endblock %}
